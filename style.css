@@ -31,7 +31,21 @@ nav {
   width: 100%;
   transition: 0.6s;
 }
+.parallax {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url('https://cdn.pixabay.com/photo/2019/10/21/15/05/rio-de-janeiro-4566312_960_720.jpg');
 
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-text {
+  text-align: center;
+}
 .sticky {
   background-color: white;
 }
@@ -65,8 +79,12 @@ nav {
 }
 
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #1F2937;
   color: white;
+  height: 80vh;
 }
 .hero-container {
   padding: 3rem 0;
@@ -242,4 +260,17 @@ footer {
   text-align: center;
   color: #EFe7eb;
   font-weight: 300;
+}
+
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+}
+.carousel-slide {
+  display: flex;
+}
+
+.reviewImg img{
+  width: 300px;
+  height: 300px;
 }
