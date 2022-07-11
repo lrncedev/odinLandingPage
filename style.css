@@ -31,6 +31,16 @@ nav {
   width: 100%;
   transition: 0.6s;
 }
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 .parallax {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.2)) ,url('https://cdn.pixabay.com/photo/2019/10/21/15/05/rio-de-janeiro-4566312_960_720.jpg');
 
@@ -48,6 +58,7 @@ nav {
 }
 .sticky {
   background-color: white;
+  opacity: .7;
 }
 
 .sticky .nav-logo {
@@ -66,12 +77,19 @@ nav {
   flex-grow: 1;
   font-size: 24px;
   color: #f9faf8;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-links a {
-  margin-right: 1rem;
   font-size: 18px;
   color: #EFe7eb;
+  padding: .4rem 1rem;;
 }
 
 .nav-links a:hover {
@@ -84,7 +102,7 @@ nav {
   align-items: center;
   background-color: #1F2937;
   color: white;
-  height: 80vh;
+  height: 100vh;
 }
 .hero-container {
   padding: 3rem 0;
@@ -98,16 +116,13 @@ nav {
   margin: 0 auto;
   height: 300px;
 }
-.hero-text {
-  padding-right: 3rem;
-}
 .main-text {
-  font-size: 48px;
+  font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 1rem;
 }
 .secondary-text {
-  font-size: 18px;
+  font-size: 1.4rem;
   color: #EFe7eb;
   font-weight: 300;
 }
@@ -193,7 +208,7 @@ nav {
 
 .qoute {
   background-color: #e5e7eb;
-  padding: 3rem 0;
+  padding: 2rem 0;
 
 }
 
@@ -207,7 +222,7 @@ nav {
 }
 
 .message {
-  font-size: 36px;
+  font-size: 1.8rem;
   font-weight: 100;
   font-style: italic;
 }
@@ -218,13 +233,7 @@ nav {
   font-weight: 400;
   margin-right: 4rem;
 }
-/* 
-.cta-container {
-  padding: 3rem 0;
-  display: flex;
-  justify-content: space-around;
-  background-color: #3882f6;
-} */
+
 
 .cta {
   display: flex;
@@ -236,14 +245,19 @@ nav {
 .cta-cont {
   background-color: #3882f6;
   padding: 2rem 0;
-  width: 60%;
-  margin: 0 auto;
+  width: 90%;
   display: flex;
+  flex-direction: column;
   color: white;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   border-radius: 8px;
+  text-align: center;
 }
+.cta-cont div {
+  margin-bottom: .5rem;
+}
+
 .cta-desc {
   font-weight: 300;
 }
@@ -252,6 +266,7 @@ nav {
   border: 2px solid white;
   background-color: transparent;
   color: white;
+  text-align: left;
   border-radius: 8px;
 }
 
@@ -273,4 +288,43 @@ footer {
 .reviewImg img{
   width: 300px;
   height: 300px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+  }
+
+  .stickyNav {
+    padding: 0;
+  }
+
+  .nav-logo {
+    margin: 0;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  .qoute-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .message {
+    font-size: 36px;
+  }
+
+  .cta-cont {
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+  
 }
